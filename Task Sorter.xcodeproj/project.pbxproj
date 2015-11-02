@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					7D8E45D31BE71A4100D70F9F = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = RCFBK97QU7;
 					};
 					7D8E45E71BE71A4100D70F9F = {
 						CreatedOnToolsVersion = 7.1;
@@ -399,9 +400,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Task Sorter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.beauyoung.Task-Sorter";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beauyoung.tasksorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -410,9 +413,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Task Sorter/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.beauyoung.Task-Sorter";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beauyoung.tasksorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
