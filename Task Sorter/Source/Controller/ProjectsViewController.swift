@@ -15,6 +15,9 @@ class ProjectsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        tableView.registerNib(UINib(nibName: "ProjectTableViewCell", bundle: nil), forCellReuseIdentifier: "ProjectCell")
+
     }
 
 }
