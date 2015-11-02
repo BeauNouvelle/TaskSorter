@@ -9,7 +9,7 @@
         <!--Projects View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ProjectsViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectsViewController" id="BYZ-38-t0r" customClass="ProjectsViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,12 +27,22 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="n0m-CM-dis"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-JF-al3">
+                                <rect key="frame" x="542" y="37" width="31" height="30"/>
+                                <animations/>
+                                <state key="normal" title="New"/>
+                                <connections>
+                                    <segue destination="buH-K4-9L9" kind="presentation" id="Fxe-5B-29Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.78431372549019607" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="l6M-aK-EHj" secondAttribute="trailing" constant="-20" id="34j-AE-8Ty"/>
+                            <constraint firstItem="R2W-JF-al3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="AxD-tj-U82"/>
                             <constraint firstItem="l6M-aK-EHj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="aAF-IF-anH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R2W-JF-al3" secondAttribute="trailing" constant="8" id="dma-r5-DIa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l6M-aK-EHj" secondAttribute="bottom" id="o5k-jy-iby"/>
                             <constraint firstItem="l6M-aK-EHj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="oRk-FZ-Nwm"/>
                         </constraints>
@@ -40,7 +50,7 @@
                     <navigationItem key="navigationItem" id="Ft1-cp-0op"/>
                     <connections>
                         <outlet property="tableView" destination="l6M-aK-EHj" id="Tad-sd-xfO"/>
-                        <segue destination="6AO-Yb-FhC" kind="show" id="GAK-Hl-N5o"/>
+                        <segue destination="6AO-Yb-FhC" kind="show" identifier="TasksSegue" id="GAK-Hl-N5o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -50,7 +60,7 @@
         <!--Tasks View Controller-->
         <scene sceneID="yt8-3e-KI7">
             <objects>
-                <viewController id="6AO-Yb-FhC" customClass="TasksViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TasksViewController" id="6AO-Yb-FhC" customClass="TasksViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QiY-An-qEg"/>
                         <viewControllerLayoutGuide type="bottom" id="uhq-Fz-gQq"/>
@@ -60,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fxl-LP-DEZ">
-                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                                <rect key="frame" x="0.0" y="100" width="600" height="500"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -68,29 +78,36 @@
                                     <outlet property="delegate" destination="6AO-Yb-FhC" id="zHm-1C-OHm"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecc-HW-9i5">
+                                <rect key="frame" x="11" y="28" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTaped:" destination="6AO-Yb-FhC" eventType="touchUpInside" id="6j9-1t-1HK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uhq-Fz-gQq" firstAttribute="top" secondItem="fxl-LP-DEZ" secondAttribute="bottom" id="1MA-kH-Xw8"/>
+                            <constraint firstItem="fxl-LP-DEZ" firstAttribute="top" secondItem="QiY-An-qEg" secondAttribute="bottom" constant="80" id="Laa-et-vFe"/>
                             <constraint firstItem="fxl-LP-DEZ" firstAttribute="leading" secondItem="9gu-lT-xs9" secondAttribute="leadingMargin" constant="-20" id="l4I-QQ-ToA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fxl-LP-DEZ" secondAttribute="trailing" constant="-20" id="n5Q-2V-ZaQ"/>
-                            <constraint firstItem="fxl-LP-DEZ" firstAttribute="top" secondItem="9gu-lT-xs9" secondAttribute="topMargin" constant="80" id="pi1-ao-DB0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="fxl-LP-DEZ" id="L00-ks-Krs"/>
-                        <segue destination="SXo-GE-nxT" kind="show" id="Ka0-el-hl1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cq4-Lf-pxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1291" y="388"/>
+            <point key="canvasLocation" x="1334" y="734"/>
         </scene>
-        <!--Task Input View Controller-->
+        <!--Compare Tasks View Controller-->
         <scene sceneID="Lpz-Mc-bpl">
             <objects>
-                <viewController id="SXo-GE-nxT" customClass="TaskInputViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaskInputViewController" id="SXo-GE-nxT" customClass="CompareTasksViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dc4-GA-frl"/>
                         <viewControllerLayoutGuide type="bottom" id="4sG-hz-dHV"/>
@@ -98,13 +115,54 @@
                     <view key="view" contentMode="scaleToFill" id="8wT-hG-eOe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Task" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-Vc-Tbe">
+                                <rect key="frame" x="20" y="72" width="560" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YBG-50-eeN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZw-WZ-U7A">
+                                <rect key="frame" x="20" y="172" width="560" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.1140047088265419" green="0.64492237567901611" blue="0.49791008234024048" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="nOu-rE-aHE"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzc-8U-4tC">
+                                <rect key="frame" x="20" y="231" width="560" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.81115392736486491" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jIY-R6-Aai"/>
+                                </constraints>
+                                <state key="normal" title="I'm done"/>
+                            </button>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.78431372549019607" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hcl-Vc-Tbe" firstAttribute="trailing" secondItem="8wT-hG-eOe" secondAttribute="trailingMargin" id="2rc-FS-jSR"/>
+                            <constraint firstItem="kzc-8U-4tC" firstAttribute="leading" secondItem="8wT-hG-eOe" secondAttribute="leadingMargin" id="5vW-74-bUa"/>
+                            <constraint firstItem="sZw-WZ-U7A" firstAttribute="top" secondItem="Hcl-Vc-Tbe" secondAttribute="bottom" constant="50" id="7WA-Bj-Vb4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sZw-WZ-U7A" secondAttribute="trailing" id="BZD-Sy-AMn"/>
+                            <constraint firstItem="kzc-8U-4tC" firstAttribute="top" secondItem="sZw-WZ-U7A" secondAttribute="bottom" constant="15" id="Tue-1g-75a"/>
+                            <constraint firstItem="sZw-WZ-U7A" firstAttribute="leading" secondItem="8wT-hG-eOe" secondAttribute="leadingMargin" id="UAb-wF-tpa"/>
+                            <constraint firstItem="Hcl-Vc-Tbe" firstAttribute="top" secondItem="dc4-GA-frl" secondAttribute="bottom" constant="52" id="URu-3J-PTL"/>
+                            <constraint firstItem="Hcl-Vc-Tbe" firstAttribute="leading" secondItem="8wT-hG-eOe" secondAttribute="leadingMargin" id="YVD-ct-TeE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kzc-8U-4tC" secondAttribute="trailing" id="pwn-wA-NoH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Aow-dX-MLp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wsb-0X-rIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1997" y="388"/>
+            <point key="canvasLocation" x="2146" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fre-Ki-rbB">
@@ -126,5 +184,26 @@
             </objects>
             <point key="canvasLocation" x="-117" y="388"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wzl-4W-6hz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="buH-K4-9L9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1MR-0g-JeL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SXo-GE-nxT" kind="relationship" relationship="rootViewController" id="ksy-Y8-dFy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcs-1x-kiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="33"/>
+        </scene>
     </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
