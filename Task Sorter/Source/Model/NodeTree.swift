@@ -8,41 +8,28 @@
 
 import Foundation
 
-class NodeTree<T: Comparable> {
+class NodeTree: NSObject, NSCoding {
     
-    var key: T?
+    var title: String!
     var left: NodeTree?
     var right: NodeTree?
     
-//    func addNode(key: T) {
-//        
-//        //check for the head node
-//        if self.key == nil {
-//            self.key = key
-//            return
-//        }
-//        
-//        // check the left side of the tree
-//        if key < self.key {
-//            if self.left != nil {
-//                left?.addNode(key)
-//            } else {
-//                var leftChild = NodeTree()
-//                leftChild.key = key
-//                self.left = leftChild
-//            }
-//        }
-//        
-//        // check the right side of the tree
-//        if key > self.key {
-//            if self.right != nil {
-//                right?.addNode(key)
-//            } else {
-//                var rightChild = NodeTree()
-//                rightChild.key = key
-//                self.right = rightChild
-//            }
-//        }
-//    }
+    init(title: String!) {
+        super.init()
+        self.title = title
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init()
+        title = aDecoder.decodeObjectForKey("title") as! String
+        left = aDecoder.decodeObjectForKey("left") as? NodeTree
+        right = aDecoder.decodeObjectForKey("right") as? NodeTree
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(title, forKey: "title")
+        aCoder.encodeObject(left, forKey: "left")
+        aCoder.encodeObject(right, forKey: "right")
+    }
     
 }

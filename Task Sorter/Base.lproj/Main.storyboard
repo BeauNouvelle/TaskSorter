@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Projects View Controller-->
+        <!--Tasks View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ProjectsViewController" id="BYZ-38-t0r" customClass="ProjectsViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectsViewController" id="BYZ-38-t0r" customClass="TasksViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,10 +27,10 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="n0m-CM-dis"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-JF-al3">
-                                <rect key="frame" x="542" y="37" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-JF-al3">
+                                <rect key="frame" x="542" y="37" width="30" height="30"/>
                                 <animations/>
-                                <state key="normal" title="New"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
                                     <segue destination="buH-K4-9L9" kind="presentation" id="Fxe-5B-29Y"/>
                                 </connections>
@@ -60,7 +60,7 @@
         <!--Add Task View Controller-->
         <scene sceneID="Lpz-Mc-bpl">
             <objects>
-                <viewController storyboardIdentifier="TaskInputViewController" id="SXo-GE-nxT" customClass="AddTaskViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTaskViewController" id="SXo-GE-nxT" customClass="AddTaskViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dc4-GA-frl"/>
                         <viewControllerLayoutGuide type="bottom" id="4sG-hz-dHV"/>
@@ -133,12 +133,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wsb-0X-rIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2146" y="33"/>
+            <point key="canvasLocation" x="2039" y="33"/>
         </scene>
-        <!--Compare Tasks View Controller-->
+        <!--Task Compare View Controller-->
         <scene sceneID="k20-N4-NuD">
             <objects>
-                <viewController id="RZV-OM-dhF" customClass="CompareTasksViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaskCompareViewController" id="RZV-OM-dhF" customClass="TaskCompareViewController" customModule="Task_Sorter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="749-JH-0o8"/>
                         <viewControllerLayoutGuide type="bottom" id="rVT-br-L6D"/>
@@ -147,15 +147,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-je-Eb1">
-                                <rect key="frame" x="20" y="155" width="560" height="80"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.11400470879999999" green="0.64492237569999999" blue="0.4979100823" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="bIy-ME-QVK"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-DQ-Iyt">
                                 <rect key="frame" x="20" y="265" width="560" height="80"/>
                                 <animations/>
@@ -164,6 +155,9 @@
                                     <constraint firstAttribute="height" constant="80" id="RcS-mg-xYx"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="newNodeButtonTapped:" destination="RZV-OM-dhF" eventType="touchUpInside" id="NmE-ME-09u"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which one is larger?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifx-lN-kCK">
                                 <rect key="frame" x="20" y="56" width="560" height="35"/>
@@ -175,6 +169,18 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-je-Eb1">
+                                <rect key="frame" x="20" y="155" width="560" height="80"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.11400470879999999" green="0.64492237569999999" blue="0.4979100823" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="bIy-ME-QVK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rootNodeButtonTapped:" destination="RZV-OM-dhF" eventType="touchUpInside" id="YO2-Le-ZWU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.78431372549019607" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
@@ -190,10 +196,14 @@
                             <constraint firstItem="ifx-lN-kCK" firstAttribute="trailing" secondItem="4Ej-3Y-nK4" secondAttribute="trailingMargin" id="u7E-wO-5OW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newNodeButton" destination="ldc-DQ-Iyt" id="7WR-K4-T8J"/>
+                        <outlet property="rootNodeButton" destination="gEk-je-Eb1" id="Dwf-Vg-h66"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jg7-OM-plN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889" y="33"/>
+            <point key="canvasLocation" x="2739" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wzl-4W-6hz">

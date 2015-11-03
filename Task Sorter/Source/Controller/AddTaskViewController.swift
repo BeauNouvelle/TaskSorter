@@ -16,12 +16,10 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
-    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: Actions
@@ -32,11 +30,22 @@ class AddTaskViewController: UIViewController {
             return
         }
         
-        let taskCompareViewController = storyboard?.instantiateViewControllerWithIdentifier("TaskCompareViewController") as! TaskCompareViewController
+        NodeManager.sharedManager.saveNodesInSortedArray()
         
-        // TODO: set task name
-        
-        navigationController?.pushViewController(taskCompareViewController, animated: true)
+        if let rootNode = NodeManager.sharedManager.rootNode {
+            // move onto compare screen
+
+            let taskCompareViewController = storyboard?.instantiateViewControllerWithIdentifier("TaskCompareViewController") as! TaskCompareViewController
+            
+            taskCompareViewController.newNode = NodeTree(title: inputTextField.text)
+            taskCompareViewController.rootNode = rootNode
+            
+            navigationController?.pushViewController(taskCompareViewController, animated: true)
+        } else { // create new top node. repeat screen with another input.
+            NodeManager.sharedManager.createTopNode(inputTextField.text)
+            let addTaskViewController = storyboard?.instantiateViewControllerWithIdentifier("AddTaskViewController") as! AddTaskViewController
+            navigationController?.pushViewController(addTaskViewController, animated: true)
+        }
     }
     
     

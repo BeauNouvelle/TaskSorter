@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: NodeManager.Keys.TopNode.rawValue)
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: NodeManager.Keys.SortedNodes.rawValue)
+
         return true
     }
 

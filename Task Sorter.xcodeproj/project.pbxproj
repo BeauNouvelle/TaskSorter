@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D13714E1BE88CD6008752BF /* NodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D13714D1BE88CD6008752BF /* NodeManager.swift */; };
 		7D8E45D81BE71A4100D70F9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E45D71BE71A4100D70F9F /* AppDelegate.swift */; };
 		7D8E45DD1BE71A4100D70F9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E45DB1BE71A4100D70F9F /* Main.storyboard */; };
 		7D8E45DF1BE71A4100D70F9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E45DE1BE71A4100D70F9F /* Assets.xcassets */; };
 		7D8E45E21BE71A4100D70F9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E45E01BE71A4100D70F9F /* LaunchScreen.storyboard */; };
 		7D8E45ED1BE71A4100D70F9F /* Task_SorterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E45EC1BE71A4100D70F9F /* Task_SorterTests.swift */; };
 		7D8E45F81BE71A4100D70F9F /* Task_SorterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E45F71BE71A4100D70F9F /* Task_SorterUITests.swift */; };
-		7D8E460D1BE74F4A00D70F9F /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46091BE74F4A00D70F9F /* ProjectsViewController.swift */; };
 		7D8E460E1BE74F4A00D70F9F /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E460A1BE74F4A00D70F9F /* TasksViewController.swift */; };
 		7D8E46101BE750B600D70F9F /* TaskCompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E460F1BE750B600D70F9F /* TaskCompareViewController.swift */; };
-		7D8E46131BE751E100D70F9F /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46111BE751E100D70F9F /* ProjectTableViewCell.swift */; };
-		7D8E46141BE751E100D70F9F /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E46121BE751E100D70F9F /* ProjectTableViewCell.xib */; };
 		7D8E46171BE751EE00D70F9F /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46151BE751EE00D70F9F /* TaskTableViewCell.swift */; };
 		7D8E46181BE751EE00D70F9F /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E46161BE751EE00D70F9F /* TaskTableViewCell.xib */; };
 		7D8E461A1BE7572E00D70F9F /* NodeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46191BE7572E00D70F9F /* NodeTree.swift */; };
@@ -41,7 +39,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7D13714C1BE886A5008752BF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7D13714D1BE88CD6008752BF /* NodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeManager.swift; sourceTree = "<group>"; };
 		7D8E45D41BE71A4100D70F9F /* Task Sorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Sorter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8E45D71BE71A4100D70F9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D8E45DC1BE71A4100D70F9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,11 +66,8 @@
 		7D8E45F31BE71A4100D70F9F /* Task SorterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task SorterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8E45F71BE71A4100D70F9F /* Task_SorterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_SorterUITests.swift; sourceTree = "<group>"; };
 		7D8E45F91BE71A4100D70F9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D8E46091BE74F4A00D70F9F /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		7D8E460A1BE74F4A00D70F9F /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		7D8E460F1BE750B600D70F9F /* TaskCompareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCompareViewController.swift; sourceTree = "<group>"; };
-		7D8E46111BE751E100D70F9F /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
-		7D8E46121BE751E100D70F9F /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
 		7D8E46151BE751EE00D70F9F /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		7D8E46161BE751EE00D70F9F /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		7D8E46191BE7572E00D70F9F /* NodeTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTree.swift; sourceTree = "<group>"; };
@@ -154,7 +163,6 @@
 		7D8E46081BE74F4A00D70F9F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7D8E46091BE74F4A00D70F9F /* ProjectsViewController.swift */,
 				7D8E460A1BE74F4A00D70F9F /* TasksViewController.swift */,
 				7D8E461B1BE78AEE00D70F9F /* AddTaskViewController.swift */,
 				7D8E460F1BE750B600D70F9F /* TaskCompareViewController.swift */,
@@ -166,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				7D8E46191BE7572E00D70F9F /* NodeTree.swift */,
+				7D13714D1BE88CD6008752BF /* NodeManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,8 +182,6 @@
 		7D8E460C1BE74F4A00D70F9F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7D8E46111BE751E100D70F9F /* ProjectTableViewCell.swift */,
-				7D8E46121BE751E100D70F9F /* ProjectTableViewCell.xib */,
 				7D8E46151BE751EE00D70F9F /* TaskTableViewCell.swift */,
 				7D8E46161BE751EE00D70F9F /* TaskTableViewCell.xib */,
 			);
@@ -191,6 +198,7 @@
 				7D8E45D01BE71A4100D70F9F /* Sources */,
 				7D8E45D11BE71A4100D70F9F /* Frameworks */,
 				7D8E45D21BE71A4100D70F9F /* Resources */,
+				7D13714C1BE886A5008752BF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,7 +297,6 @@
 				7D8E45E21BE71A4100D70F9F /* LaunchScreen.storyboard in Resources */,
 				7D8E45DF1BE71A4100D70F9F /* Assets.xcassets in Resources */,
 				7D8E45DD1BE71A4100D70F9F /* Main.storyboard in Resources */,
-				7D8E46141BE751E100D70F9F /* ProjectTableViewCell.xib in Resources */,
 				7D8E46181BE751EE00D70F9F /* TaskTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,12 +324,11 @@
 			files = (
 				7D8E461A1BE7572E00D70F9F /* NodeTree.swift in Sources */,
 				7D8E461C1BE78AEE00D70F9F /* AddTaskViewController.swift in Sources */,
-				7D8E46131BE751E100D70F9F /* ProjectTableViewCell.swift in Sources */,
-				7D8E460D1BE74F4A00D70F9F /* ProjectsViewController.swift in Sources */,
 				7D8E46171BE751EE00D70F9F /* TaskTableViewCell.swift in Sources */,
 				7D8E460E1BE74F4A00D70F9F /* TasksViewController.swift in Sources */,
 				7D8E46101BE750B600D70F9F /* TaskCompareViewController.swift in Sources */,
 				7D8E45D81BE71A4100D70F9F /* AppDelegate.swift in Sources */,
+				7D13714E1BE88CD6008752BF /* NodeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +471,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Task Sorter/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -478,6 +488,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Task Sorter/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -553,6 +567,7 @@
 				7D8E45FE1BE71A4100D70F9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D8E45FF1BE71A4100D70F9F /* Build configuration list for PBXNativeTarget "Task SorterTests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +576,7 @@
 				7D8E46011BE71A4100D70F9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D8E46021BE71A4100D70F9F /* Build configuration list for PBXNativeTarget "Task SorterUITests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +585,7 @@
 				7D8E46041BE71A4100D70F9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

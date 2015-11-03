@@ -10,6 +10,10 @@ import UIKit
 
 class TasksViewController: UIViewController {
     
+    var tasks: [NodeTree] {
+        return NodeManager.sharedManager.sortedNodes()
+    }
+    
     //Mark: Propeties
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,12 +24,18 @@ class TasksViewController: UIViewController {
         tableView.registerNib(UINib(nibName: "TaskTableViewCell", bundle: nil), forCellReuseIdentifier: "TaskCell")
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("View Appeared")
+        
+        // TODO: Refresh tasks
+        // iterate over node tree and add them in order to list.
+        tableView.reloadData()
+    }
 
     //MARK: Actions
     
-    @IBAction func backButtonTaped(sender: UIButton) {
-        navigationController?.popViewControllerAnimated(true)
-    }
 }
 
 // MARK: - UITableViewDataSource
@@ -36,11 +46,15 @@ extension TasksViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return tasks.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TaskCell", forIndexPath: indexPath) as! TaskTableViewCell
+        
+        let taskNode = tasks[indexPath.row]
+        cell.titleLabel.text = taskNode.title
+        
         return cell
     }
     
@@ -51,6 +65,7 @@ extension TasksViewController: UITableViewDataSource {
 extension TasksViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("TAPPED ROW")
     }
     
 }

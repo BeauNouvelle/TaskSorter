@@ -10,29 +10,62 @@ import UIKit
 
 class TaskCompareViewController: UIViewController {
     
-    // TODO: we need to do checking here.
-    // if no node exists. this is the first instance of this page. so maybe ask for a name of the project.
-    // Ask for name of new node.
-    // check tree for existing nodes.
-    // If node doesnt exist, add to last position in tree. Move to next screen.
-    // If node Does exist, ask if this new one is larger or small than it.
-    // If larger, look for next largest node and ask if currently enterered is larger or smaller.
-    // If larger, and no node exists. add it to the tree, and move onto next screen to input new node.
-    
     // MARK: Properties
-    @IBOutlet weak var taskInputTextField: UITextField!
+    var newNode: NodeTree!
+    var rootNode: NodeTree!
+    
+    @IBOutlet weak var rootNodeButton: UIButton!
+    @IBOutlet weak var newNodeButton: UIButton!
     
     // MARK: Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        rootNodeButton.setTitle(rootNode.title, forState: .Normal)
+        newNodeButton.setTitle(newNode.title, forState: .Normal)
+    }
 
     // MARK: Actions
     
-    @IBAction func backButtonTapped(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
+    // perform traversal if direction is nil, add item and return to add screen.
+    // if there is an item, move to next compare screen.
+    @IBAction func rootNodeButtonTapped(sender: UIButton) {
+        // Go left
+        if let root = rootNode.left {
+            // new compare screen. set working node to root.
+            newCompareViewController(root, newNode: newNode)
+        } else {
+            // add newNode to empty position. save. dismiss view.
+            rootNode.left = newNode
+            NodeManager.sharedManager.saveNodesInSortedArray()
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
-    @IBAction func nextButtonTapped(sender: UIButton) {
-//        let inputViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TaskInputViewController") as! TaskInputViewController
-//        navigationController?.pushViewController(inputViewController, animated: true)
+    @IBAction func newNodeButtonTapped(sender: UIButton) {
+        // Go right
+        if let root = rootNode.right {
+            // new compare screen. set working node to root.
+            newCompareViewController(root, newNode: newNode)
+        } else {
+            // add newNode to empty position. save. dismiss view.
+            rootNode.right = newNode
+            NodeManager.sharedManager.saveNodesInSortedArray()
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
+    /**
+     Creates and pushed a new compareViewController onto the navigation stack.
+     
+     - parameter rootNode: the root node for the next view to compare
+     - parameter newNode:  the new node for which we're looking to place somewhere.
+     */
+    func newCompareViewController(rootNode: NodeTree!, newNode: NodeTree!) {
+        let compareViewController = storyboard?.instantiateViewControllerWithIdentifier("TaskCompareViewController") as! TaskCompareViewController
+        compareViewController.rootNode = rootNode
+        compareViewController.newNode = newNode
+        navigationController?.pushViewController(compareViewController, animated: true)
     }
     
 }
