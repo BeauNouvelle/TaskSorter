@@ -15,12 +15,13 @@
 		7D8E45F81BE71A4100D70F9F /* Task_SorterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E45F71BE71A4100D70F9F /* Task_SorterUITests.swift */; };
 		7D8E460D1BE74F4A00D70F9F /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46091BE74F4A00D70F9F /* ProjectsViewController.swift */; };
 		7D8E460E1BE74F4A00D70F9F /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E460A1BE74F4A00D70F9F /* TasksViewController.swift */; };
-		7D8E46101BE750B600D70F9F /* CompareTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E460F1BE750B600D70F9F /* CompareTasksViewController.swift */; };
+		7D8E46101BE750B600D70F9F /* TaskCompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E460F1BE750B600D70F9F /* TaskCompareViewController.swift */; };
 		7D8E46131BE751E100D70F9F /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46111BE751E100D70F9F /* ProjectTableViewCell.swift */; };
 		7D8E46141BE751E100D70F9F /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E46121BE751E100D70F9F /* ProjectTableViewCell.xib */; };
 		7D8E46171BE751EE00D70F9F /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46151BE751EE00D70F9F /* TaskTableViewCell.swift */; };
 		7D8E46181BE751EE00D70F9F /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E46161BE751EE00D70F9F /* TaskTableViewCell.xib */; };
 		7D8E461A1BE7572E00D70F9F /* NodeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46191BE7572E00D70F9F /* NodeTree.swift */; };
+		7D8E461C1BE78AEE00D70F9F /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E461B1BE78AEE00D70F9F /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +56,13 @@
 		7D8E45F91BE71A4100D70F9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D8E46091BE74F4A00D70F9F /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		7D8E460A1BE74F4A00D70F9F /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
-		7D8E460F1BE750B600D70F9F /* CompareTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareTasksViewController.swift; sourceTree = "<group>"; };
+		7D8E460F1BE750B600D70F9F /* TaskCompareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCompareViewController.swift; sourceTree = "<group>"; };
 		7D8E46111BE751E100D70F9F /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		7D8E46121BE751E100D70F9F /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
 		7D8E46151BE751EE00D70F9F /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		7D8E46161BE751EE00D70F9F /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		7D8E46191BE7572E00D70F9F /* NodeTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTree.swift; sourceTree = "<group>"; };
+		7D8E461B1BE78AEE00D70F9F /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +156,8 @@
 			children = (
 				7D8E46091BE74F4A00D70F9F /* ProjectsViewController.swift */,
 				7D8E460A1BE74F4A00D70F9F /* TasksViewController.swift */,
-				7D8E460F1BE750B600D70F9F /* CompareTasksViewController.swift */,
+				7D8E461B1BE78AEE00D70F9F /* AddTaskViewController.swift */,
+				7D8E460F1BE750B600D70F9F /* TaskCompareViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,11 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D8E461A1BE7572E00D70F9F /* NodeTree.swift in Sources */,
+				7D8E461C1BE78AEE00D70F9F /* AddTaskViewController.swift in Sources */,
 				7D8E46131BE751E100D70F9F /* ProjectTableViewCell.swift in Sources */,
 				7D8E460D1BE74F4A00D70F9F /* ProjectsViewController.swift in Sources */,
 				7D8E46171BE751EE00D70F9F /* TaskTableViewCell.swift in Sources */,
 				7D8E460E1BE74F4A00D70F9F /* TasksViewController.swift in Sources */,
-				7D8E46101BE750B600D70F9F /* CompareTasksViewController.swift in Sources */,
+				7D8E46101BE750B600D70F9F /* TaskCompareViewController.swift in Sources */,
 				7D8E45D81BE71A4100D70F9F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

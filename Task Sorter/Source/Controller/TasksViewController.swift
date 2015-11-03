@@ -23,7 +23,8 @@ class TasksViewController: UIViewController {
 
     //MARK: Actions
     
-    @IBAction func backButtonTaped(sender: UIButton) {        navigationController?.popViewControllerAnimated(true)
+    @IBAction func backButtonTaped(sender: UIButton) {
+        navigationController?.popViewControllerAnimated(true)
     }
 }
 

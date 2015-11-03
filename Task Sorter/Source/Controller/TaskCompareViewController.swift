@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompareTasksViewController: UIViewController {
+class TaskCompareViewController: UIViewController {
     
     // TODO: we need to do checking here.
     // if no node exists. this is the first instance of this page. so maybe ask for a name of the project.
