@@ -18,7 +18,7 @@ class NodeTree: NSObject, NSCoding {
         super.init()
         self.title = title
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init()
         title = aDecoder.decodeObjectForKey("title") as! String

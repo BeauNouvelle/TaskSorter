@@ -116,6 +116,6 @@ class NodeManager: NSObject {
         result += recursiveInOrderTraversal(root!.right)
         return result
     }
-    
+
     
 }

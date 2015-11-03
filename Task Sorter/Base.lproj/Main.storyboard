@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l6M-aK-EHj">
-                                <rect key="frame" x="0.0" y="100" width="600" height="500"/>
+                                <rect key="frame" x="0.0" y="79" width="600" height="521"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -28,9 +28,14 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-JF-al3">
-                                <rect key="frame" x="542" y="37" width="30" height="30"/>
+                                <rect key="frame" x="510" y="28" width="70" height="43"/>
                                 <animations/>
-                                <state key="normal" title="Add"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="bI1-as-T0q"/>
+                                    <constraint firstAttribute="width" constant="70" id="kYp-ir-QL1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Add Task"/>
                                 <connections>
                                     <segue destination="buH-K4-9L9" kind="presentation" id="Fxe-5B-29Y"/>
                                 </connections>
@@ -40,11 +45,11 @@
                         <color key="backgroundColor" red="0.15686274509803921" green="0.78431372549019607" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="l6M-aK-EHj" secondAttribute="trailing" constant="-20" id="34j-AE-8Ty"/>
-                            <constraint firstItem="R2W-JF-al3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="AxD-tj-U82"/>
+                            <constraint firstItem="R2W-JF-al3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="AxD-tj-U82"/>
                             <constraint firstItem="l6M-aK-EHj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="aAF-IF-anH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="R2W-JF-al3" secondAttribute="trailing" constant="8" id="dma-r5-DIa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R2W-JF-al3" secondAttribute="trailing" id="dma-r5-DIa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l6M-aK-EHj" secondAttribute="bottom" id="o5k-jy-iby"/>
-                            <constraint firstItem="l6M-aK-EHj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="oRk-FZ-Nwm"/>
+                            <constraint firstItem="l6M-aK-EHj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="oRk-FZ-Nwm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ft1-cp-0op"/>

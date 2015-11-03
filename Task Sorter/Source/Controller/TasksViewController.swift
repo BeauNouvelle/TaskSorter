@@ -65,7 +65,8 @@ extension TasksViewController: UITableViewDataSource {
 extension TasksViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("TAPPED ROW")
+        let node = tasks[indexPath.row]
+        print("Tapped: ", node.title)
     }
     
 }
