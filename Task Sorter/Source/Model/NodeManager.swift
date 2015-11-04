@@ -28,7 +28,6 @@ class NodeManager: NSObject {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if let _ = defaults.valueForKey(Keys.TopNode.rawValue) as? NSData {
-            print("Has First Node")
             return true
         } else {
             return false
@@ -105,6 +104,7 @@ class NodeManager: NSObject {
     }
     
     func recursiveInOrderTraversal(root: NodeTree?) -> [NodeTree]! {
+
         if root == nil {
             return []
         }
@@ -116,6 +116,40 @@ class NodeManager: NSObject {
         result += recursiveInOrderTraversal(root!.right)
         return result
     }
+    
+    /**
+     Finds a node with the given name in the node tree.
+     - parameter title: The title of the node you want to find.
+     - returns: The node that was found, or nil if node isn't present.
+     */
+    func search(title: String!) -> NodeTree? {
+        guard hasFirstNode() else {
+            return nil
+        }
+        return findNode(title, node: rootNode)
+    }
+    
+    func deleteNode(title: String) {
+        let node = findNode(title, node: rootNode)
+        // delete the node.
+    }
+    
+    func findNode(title: String!, node: NodeTree?) -> NodeTree? {
+        if node != nil {
+            if node?.title == title {
+                return node
+            } else {
+                var foundNode = findNode(title, node: node?.left)
+                if foundNode == nil {
+                    foundNode = findNode(title, node: node?.right)
+                }
+                return foundNode
+            }
+        } else {
+            return nil
+        }
+    }
 
     
+
 }

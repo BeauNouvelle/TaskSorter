@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D13714E1BE88CD6008752BF /* NodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D13714D1BE88CD6008752BF /* NodeManager.swift */; };
+		7D1371531BEA088A008752BF /* DOAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1371521BEA088A008752BF /* DOAlertController.swift */; };
 		7D8E45D81BE71A4100D70F9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E45D71BE71A4100D70F9F /* AppDelegate.swift */; };
 		7D8E45DD1BE71A4100D70F9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E45DB1BE71A4100D70F9F /* Main.storyboard */; };
 		7D8E45DF1BE71A4100D70F9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E45DE1BE71A4100D70F9F /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		7D13714D1BE88CD6008752BF /* NodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeManager.swift; sourceTree = "<group>"; };
+		7D1371521BEA088A008752BF /* DOAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOAlertController.swift; sourceTree = "<group>"; };
 		7D8E45D41BE71A4100D70F9F /* Task Sorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Sorter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8E45D71BE71A4100D70F9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D8E45DC1BE71A4100D70F9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D13714F1BEA061B008752BF /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				7D1371521BEA088A008752BF /* DOAlertController.swift */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		7D8E45CB1BE71A4100D70F9F = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 				7D8E45DE1BE71A4100D70F9F /* Assets.xcassets */,
 				7D8E45E01BE71A4100D70F9F /* LaunchScreen.storyboard */,
 				7D8E45E31BE71A4100D70F9F /* Info.plist */,
+				7D13714F1BEA061B008752BF /* Vendor */,
 			);
 			path = "Task Sorter";
 			sourceTree = "<group>";
@@ -323,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D8E461A1BE7572E00D70F9F /* NodeTree.swift in Sources */,
+				7D1371531BEA088A008752BF /* DOAlertController.swift in Sources */,
 				7D8E461C1BE78AEE00D70F9F /* AddTaskViewController.swift in Sources */,
 				7D8E46171BE751EE00D70F9F /* TaskTableViewCell.swift in Sources */,
 				7D8E460E1BE74F4A00D70F9F /* TasksViewController.swift in Sources */,

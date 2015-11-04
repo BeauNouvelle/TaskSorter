@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l6M-aK-EHj">
-                                <rect key="frame" x="0.0" y="79" width="600" height="521"/>
+                                <rect key="frame" x="0.0" y="74" width="600" height="526"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -27,8 +27,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="n0m-CM-dis"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-JF-al3">
-                                <rect key="frame" x="510" y="28" width="70" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-JF-al3">
+                                <rect key="frame" x="510" y="23" width="70" height="43"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="bI1-as-T0q"/>
@@ -40,16 +40,25 @@
                                     <segue destination="buH-K4-9L9" kind="presentation" id="Fxe-5B-29Y"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwb-mg-8ud">
+                                <rect key="frame" x="272" y="35" width="56" height="27"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.78431372549019607" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="l6M-aK-EHj" secondAttribute="trailing" constant="-20" id="34j-AE-8Ty"/>
+                            <constraint firstItem="mwb-mg-8ud" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="8Ce-JF-hNh"/>
                             <constraint firstItem="R2W-JF-al3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="AxD-tj-U82"/>
+                            <constraint firstItem="mwb-mg-8ud" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S40-tS-RXd"/>
                             <constraint firstItem="l6M-aK-EHj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="aAF-IF-anH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="R2W-JF-al3" secondAttribute="trailing" id="dma-r5-DIa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l6M-aK-EHj" secondAttribute="bottom" id="o5k-jy-iby"/>
-                            <constraint firstItem="l6M-aK-EHj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="oRk-FZ-Nwm"/>
+                            <constraint firstItem="l6M-aK-EHj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="oRk-FZ-Nwm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ft1-cp-0op"/>
@@ -109,9 +118,9 @@
                                     <constraint firstAttribute="height" constant="44" id="jIY-R6-Aai"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="No more tasks, I'm done"/>
+                                <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <action selector="doneButtonTapped:" destination="SXo-GE-nxT" eventType="touchUpInside" id="oPP-st-3Bv"/>
+                                    <action selector="cancelButtonTapped:" destination="SXo-GE-nxT" eventType="touchUpInside" id="9wv-jb-lyF"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -27,10 +27,6 @@ class TasksViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print("View Appeared")
-        
-        // TODO: Refresh tasks
-        // iterate over node tree and add them in order to list.
         tableView.reloadData()
     }
 
@@ -54,6 +50,7 @@ extension TasksViewController: UITableViewDataSource {
         
         let taskNode = tasks[indexPath.row]
         cell.titleLabel.text = taskNode.title
+        cell.selectionStyle = .None
         
         return cell
     }
@@ -64,9 +61,19 @@ extension TasksViewController: UITableViewDataSource {
 
 extension TasksViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        print("delete")
         let node = tasks[indexPath.row]
-        print("Tapped: ", node.title)
+        NodeManager.sharedManager.deleteNode(node.title)
+        NodeManager.sharedManager.saveNodesInSortedArray()
     }
     
 }

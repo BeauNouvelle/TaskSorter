@@ -10,6 +10,7 @@ import Foundation
 
 class NodeTree: NSObject, NSCoding {
     
+    var parent: NodeTree?
     var title: String!
     var left: NodeTree?
     var right: NodeTree?
