@@ -130,7 +130,21 @@ class NodeManager: NSObject {
     }
     
     func deleteNode(title: String) {
-        let node = findNode(title, node: rootNode)
+        var target = search(title)
+        var parent = target?.parent
+        var node: NodeTree?
+        
+        if target == nil {
+            return
+        }
+        
+        var isLeft = target == parent?.left
+        
+        if target == rootNode {
+            // get the last house on the left
+        }
+        
+        
         // delete the node.
     }
     
