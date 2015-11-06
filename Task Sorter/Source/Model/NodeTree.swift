@@ -33,4 +33,11 @@ class NodeTree: NSObject, NSCoding {
         aCoder.encodeObject(right, forKey: "right")
     }
     
+    func isLeaf() -> Bool {
+        if left == nil && right == nil {
+            return true
+        }
+        return false
+    }
+    
 }

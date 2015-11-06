@@ -70,12 +70,12 @@ extension TasksViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        print("delete")
+
         let node = tasks[indexPath.row]
         NodeManager.sharedManager.deleteNode(node.title)
-        NodeManager.sharedManager.saveNodesInSortedArray()
+//        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        tableView.reloadData()
     }
-    
 }
 
 
