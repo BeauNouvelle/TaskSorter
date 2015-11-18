@@ -10,8 +10,8 @@ import Foundation
 
 class NodeTree: NSObject, NSCoding {
     
-    var parent: NodeTree?
     var title: String!
+    var parent: NodeTree?
     var left: NodeTree?
     var right: NodeTree?
     
@@ -22,12 +22,14 @@ class NodeTree: NSObject, NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
+        parent = aDecoder.decodeObjectForKey("parent") as? NodeTree
         title = aDecoder.decodeObjectForKey("title") as! String
         left = aDecoder.decodeObjectForKey("left") as? NodeTree
         right = aDecoder.decodeObjectForKey("right") as? NodeTree
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(parent, forKey: "parent")
         aCoder.encodeObject(title, forKey: "title")
         aCoder.encodeObject(left, forKey: "left")
         aCoder.encodeObject(right, forKey: "right")

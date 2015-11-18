@@ -173,16 +173,6 @@
                                     <action selector="newNodeButtonTapped:" destination="RZV-OM-dhF" eventType="touchUpInside" id="NmE-ME-09u"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which one is larger?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifx-lN-kCK">
-                                <rect key="frame" x="20" y="56" width="560" height="35"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="p1S-li-51t"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEk-je-Eb1">
                                 <rect key="frame" x="20" y="155" width="560" height="80"/>
                                 <animations/>
@@ -195,6 +185,16 @@
                                     <action selector="rootNodeButtonTapped:" destination="RZV-OM-dhF" eventType="touchUpInside" id="YO2-Le-ZWU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which one requires the most effort?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifx-lN-kCK">
+                                <rect key="frame" x="0.0" y="56" width="600" height="66"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="p1S-li-51t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.15686274509803921" green="0.78431372549019607" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
@@ -204,10 +204,10 @@
                             <constraint firstItem="ldc-DQ-Iyt" firstAttribute="leading" secondItem="4Ej-3Y-nK4" secondAttribute="leadingMargin" id="9hS-6D-d8Q"/>
                             <constraint firstItem="ifx-lN-kCK" firstAttribute="top" secondItem="749-JH-0o8" secondAttribute="bottom" constant="36" id="HeH-hj-O7h"/>
                             <constraint firstItem="ldc-DQ-Iyt" firstAttribute="trailing" secondItem="4Ej-3Y-nK4" secondAttribute="trailingMargin" id="LRH-DD-WzT"/>
-                            <constraint firstItem="ifx-lN-kCK" firstAttribute="leading" secondItem="4Ej-3Y-nK4" secondAttribute="leadingMargin" id="Qhe-yW-qst"/>
-                            <constraint firstItem="gEk-je-Eb1" firstAttribute="top" secondItem="ifx-lN-kCK" secondAttribute="bottom" constant="64" id="Spk-me-06X"/>
+                            <constraint firstItem="ifx-lN-kCK" firstAttribute="leading" secondItem="4Ej-3Y-nK4" secondAttribute="leadingMargin" constant="-20" id="Qhe-yW-qst"/>
+                            <constraint firstItem="gEk-je-Eb1" firstAttribute="top" secondItem="ifx-lN-kCK" secondAttribute="bottom" constant="33" id="Spk-me-06X"/>
                             <constraint firstItem="ldc-DQ-Iyt" firstAttribute="top" secondItem="gEk-je-Eb1" secondAttribute="bottom" constant="30" id="VFR-gX-nhk"/>
-                            <constraint firstItem="ifx-lN-kCK" firstAttribute="trailing" secondItem="4Ej-3Y-nK4" secondAttribute="trailingMargin" id="u7E-wO-5OW"/>
+                            <constraint firstItem="ifx-lN-kCK" firstAttribute="trailing" secondItem="4Ej-3Y-nK4" secondAttribute="trailingMargin" constant="20" id="u7E-wO-5OW"/>
                         </constraints>
                     </view>
                     <connections>

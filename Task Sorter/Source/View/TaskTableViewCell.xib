@@ -16,9 +16,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEs-3k-1j3">
-                        <rect key="frame" x="8" y="11" width="42" height="21"/>
+                        <rect key="frame" x="17" y="11" width="42" height="21"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -26,7 +26,7 @@
                 <animations/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="HEs-3k-1j3" secondAttribute="bottom" constant="3" id="1h5-jU-nAv"/>
-                    <constraint firstItem="HEs-3k-1j3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Iyy-dd-O5Q"/>
+                    <constraint firstItem="HEs-3k-1j3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="Iyy-dd-O5Q"/>
                     <constraint firstItem="HEs-3k-1j3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="wIL-rU-pqa"/>
                 </constraints>
             </tableViewCellContentView>

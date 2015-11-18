@@ -36,8 +36,8 @@ class TaskCompareViewController: UIViewController {
             newCompareViewController(root, newNode: newNode)
         } else {
             // add newNode to empty position. save. dismiss view.
-            newNode.parent = rootNode
             rootNode.left = newNode
+            newNode.parent = rootNode
             NodeManager.sharedManager.saveNodesInSortedArray()
             dismissViewControllerAnimated(true, completion: nil)
         }
@@ -50,8 +50,8 @@ class TaskCompareViewController: UIViewController {
             newCompareViewController(root, newNode: newNode)
         } else {
             // add newNode to empty position. save. dismiss view.
-            newNode.parent = rootNode
             rootNode.right = newNode
+            newNode.parent = rootNode
 
             NodeManager.sharedManager.saveNodesInSortedArray()
             dismissViewControllerAnimated(true, completion: nil)

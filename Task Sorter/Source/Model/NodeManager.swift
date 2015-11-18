@@ -9,7 +9,7 @@
 import UIKit
 
 class NodeManager: NSObject {
-
+    
     static let sharedManager = NodeManager()
     var rootNode: NodeTree?
     
@@ -58,7 +58,7 @@ class NodeManager: NSObject {
         let node = NodeTree(title: title)
         rootNode = node
         let encodedNode = NSKeyedArchiver.archivedDataWithRootObject(node)
-         defaults.setObject(encodedNode, forKey: Keys.TopNode.rawValue)
+        defaults.setObject(encodedNode, forKey: Keys.TopNode.rawValue)
         defaults.synchronize()
     }
     
@@ -82,14 +82,15 @@ class NodeManager: NSObject {
      Saves the root node and all its decendents as well as generating a sorted array of all nodes.
      */
     func saveNodesInSortedArray() {
-
-        guard let node = self.rootNode else {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        guard let node = rootNode else {
+            defaults.setObject(nil, forKey: Keys.SortedNodes.rawValue)
+            defaults.setObject(nil, forKey: Keys.TopNode.rawValue)
             return
         }
         
         let sortedNodes = recursiveInOrderTraversal(node)
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
         
         let encodedRootNode = NSKeyedArchiver.archivedDataWithRootObject(node)
         let encodedArray = NSKeyedArchiver.archivedDataWithRootObject(sortedNodes)
@@ -100,7 +101,7 @@ class NodeManager: NSObject {
     }
     
     func recursiveInOrderTraversal(root: NodeTree?) -> [NodeTree]! {
-
+        
         if root == nil {
             return []
         }
@@ -122,49 +123,100 @@ class NodeManager: NSObject {
         guard hasFirstNode() else {
             return nil
         }
+        
         return findNode(title, node: rootNode)
     }
     
     func deleteNode(title: String) {
         
-        let target = search(title)
+        var target = search(title)
         
-        if target?.parent == nil {                              // is root
-            if let rightNode = target?.right {
-                if let leftNode = target?.left {
-                    rootNode = rightNode
-                    rootNode?.left = leftNode
-                } else {
-                    rootNode = rightNode
-                }
-            } else if let leftNode = target?.left {
-                if let rightNode = target?.right {
-                    rootNode = leftNode
-                    rootNode?.right = rightNode
-                } else {
-                    rootNode = leftNode
-                }
+        if target?.title == rootNode?.title {                   // is root node
+            print("is root")
+            
+            if target?.right == nil {
+                print("no right")
+                rootNode = target?.left
+            } else if target?.left == nil {
+                print("no left")
+                rootNode = target?.right
             } else {
-                rootNode = nil
+                print("Root has two children")
+                let lastNodeOnLeft = getLastOnLeft(target?.right)
+                lastNodeOnLeft.left = target?.left
+                target?.left?.parent = lastNodeOnLeft
+                rootNode = target?.right
             }
-        } else if target!.isLeaf() {                            // is leaf
-            if target?.parent?.left?.title == target?.title {
+            target = nil
+            rootNode?.parent = nil
+        } else if target!.isLeaf() {                                // is leaf. delete easily.
+            print("is leaf")
+            if target?.parent?.left == target {
                 target?.parent?.left = nil
             } else {
                 target?.parent?.right = nil
             }
-        } else if target?.right != nil && target?.left != nil { // has two children
-            
-        } else {                                                // has one child
-            
+            target = nil
+        } else if target?.right != nil && target?.left != nil {    // has two children
+            if target?.parent?.left == target {    // is left
+                let lastNodeOnLeft = getLastOnLeft(target?.right)
+                lastNodeOnLeft.left = target?.left
+                target?.parent?.left = target?.right
+                target?.right?.parent = target?.parent
+                target = nil
+            } else {                               // is right
+                let lastNodeOnLeft = getLastOnLeft(target?.right)
+                lastNodeOnLeft.left = target?.left
+                target?.parent?.right = target?.right
+                target?.right?.parent = target?.parent
+                target = nil
+            }
+        } else {                                                   // has one child
+            if target?.left == nil {
+                if target?.parent?.left == target {
+                    target?.parent?.left = target?.right
+                    target?.right?.parent = target?.parent
+                    target = nil
+                } else {
+                    target?.parent?.right = target?.right
+                    target?.right?.parent = target?.parent
+                    target = nil
+                }
+            } else {
+                if target?.parent?.left == target { //less than largest after medium > large deleted
+                    target?.parent?.left = target?.left
+                    target?.left?.parent = target?.parent
+                    target = nil
+                } else {
+                    target?.parent?.right = target?.left
+                    target?.left?.parent = target?.parent
+                    target = nil
+                }
+            }
         }
-        
         
         saveNodesInSortedArray()
     }
     
+    func getLastOnLeft(inputNode: NodeTree!) -> NodeTree! {
+        var candidate: NodeTree?
+        var tempNode = inputNode
+        
+        while tempNode != nil {
+            if tempNode.left != nil {
+                candidate = tempNode.left
+            } else {
+                candidate = tempNode
+            }
+            tempNode = tempNode.left
+        }
+        
+        return candidate
+    }
+    
     func findNode(title: String!, node: NodeTree?) -> NodeTree? {
         if node != nil {
+            print("FIND NODE: \(node?.title)  PARENT: \(node?.parent?.title)")
             if node?.title == title {
                 return node
             } else {
@@ -178,5 +230,5 @@ class NodeManager: NSObject {
             return nil
         }
     }
-
+    
 }

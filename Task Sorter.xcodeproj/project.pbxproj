@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D13714E1BE88CD6008752BF /* NodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D13714D1BE88CD6008752BF /* NodeManager.swift */; };
 		7D1371531BEA088A008752BF /* DOAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1371521BEA088A008752BF /* DOAlertController.swift */; };
+		7D5157C71BF08DC400773A48 /* NodeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46191BE7572E00D70F9F /* NodeTree.swift */; };
 		7D8E45D81BE71A4100D70F9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E45D71BE71A4100D70F9F /* AppDelegate.swift */; };
 		7D8E45DD1BE71A4100D70F9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E45DB1BE71A4100D70F9F /* Main.storyboard */; };
 		7D8E45DF1BE71A4100D70F9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E45DE1BE71A4100D70F9F /* Assets.xcassets */; };
@@ -19,8 +20,11 @@
 		7D8E46101BE750B600D70F9F /* TaskCompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E460F1BE750B600D70F9F /* TaskCompareViewController.swift */; };
 		7D8E46171BE751EE00D70F9F /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46151BE751EE00D70F9F /* TaskTableViewCell.swift */; };
 		7D8E46181BE751EE00D70F9F /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E46161BE751EE00D70F9F /* TaskTableViewCell.xib */; };
-		7D8E461A1BE7572E00D70F9F /* NodeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46191BE7572E00D70F9F /* NodeTree.swift */; };
 		7D8E461C1BE78AEE00D70F9F /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E461B1BE78AEE00D70F9F /* AddTaskViewController.swift */; };
+		7DB4BE601BFAFB7400443630 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4BE5F1BFAFB7400443630 /* AppDelegate.swift */; };
+		7DB4BE621BFAFB7400443630 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4BE611BFAFB7400443630 /* TasksViewController.swift */; };
+		7DB4BE641BFAFB7400443630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4BE631BFAFB7400443630 /* Assets.xcassets */; };
+		7DB4BE671BFAFB7400443630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4BE651BFAFB7400443630 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,12 @@
 		7D8E46161BE751EE00D70F9F /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		7D8E46191BE7572E00D70F9F /* NodeTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTree.swift; sourceTree = "<group>"; };
 		7D8E461B1BE78AEE00D70F9F /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		7DB4BE5D1BFAFB7400443630 /* Task Sorter Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Sorter Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DB4BE5F1BFAFB7400443630 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7DB4BE611BFAFB7400443630 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		7DB4BE631BFAFB7400443630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7DB4BE661BFAFB7400443630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7DB4BE681BFAFB7400443630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DB4BE5A1BFAFB7400443630 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,6 +132,7 @@
 				7D8E45D61BE71A4100D70F9F /* Task Sorter */,
 				7D8E45EB1BE71A4100D70F9F /* Task SorterTests */,
 				7D8E45F61BE71A4100D70F9F /* Task SorterUITests */,
+				7DB4BE5E1BFAFB7400443630 /* Task Sorter Mac */,
 				7D8E45D51BE71A4100D70F9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +143,7 @@
 				7D8E45D41BE71A4100D70F9F /* Task Sorter.app */,
 				7D8E45E81BE71A4100D70F9F /* Task SorterTests.xctest */,
 				7D8E45F31BE71A4100D70F9F /* Task SorterUITests.xctest */,
+				7DB4BE5D1BFAFB7400443630 /* Task Sorter Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +218,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7DB4BE5E1BFAFB7400443630 /* Task Sorter Mac */ = {
+			isa = PBXGroup;
+			children = (
+				7DB4BE5F1BFAFB7400443630 /* AppDelegate.swift */,
+				7DB4BE611BFAFB7400443630 /* TasksViewController.swift */,
+				7DB4BE631BFAFB7400443630 /* Assets.xcassets */,
+				7DB4BE651BFAFB7400443630 /* Main.storyboard */,
+				7DB4BE681BFAFB7400443630 /* Info.plist */,
+			);
+			path = "Task Sorter Mac";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,6 +287,23 @@
 			productReference = 7D8E45F31BE71A4100D70F9F /* Task SorterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		7DB4BE5C1BFAFB7400443630 /* Task Sorter Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DB4BE6B1BFAFB7400443630 /* Build configuration list for PBXNativeTarget "Task Sorter Mac" */;
+			buildPhases = (
+				7DB4BE591BFAFB7400443630 /* Sources */,
+				7DB4BE5A1BFAFB7400443630 /* Frameworks */,
+				7DB4BE5B1BFAFB7400443630 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Task Sorter Mac";
+			productName = "Task Sorter Mac";
+			productReference = 7DB4BE5D1BFAFB7400443630 /* Task Sorter Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,6 +326,9 @@
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = 7D8E45D31BE71A4100D70F9F;
 					};
+					7DB4BE5C1BFAFB7400443630 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 7D8E45CF1BE71A4100D70F9F /* Build configuration list for PBXProject "Task Sorter" */;
@@ -296,6 +347,7 @@
 				7D8E45D31BE71A4100D70F9F /* Task Sorter */,
 				7D8E45E71BE71A4100D70F9F /* Task SorterTests */,
 				7D8E45F21BE71A4100D70F9F /* Task SorterUITests */,
+				7DB4BE5C1BFAFB7400443630 /* Task Sorter Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -326,6 +378,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DB4BE5B1BFAFB7400443630 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DB4BE641BFAFB7400443630 /* Assets.xcassets in Resources */,
+				7DB4BE671BFAFB7400443630 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -333,7 +394,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D8E461A1BE7572E00D70F9F /* NodeTree.swift in Sources */,
 				7D1371531BEA088A008752BF /* DOAlertController.swift in Sources */,
 				7D8E461C1BE78AEE00D70F9F /* AddTaskViewController.swift in Sources */,
 				7D8E46171BE751EE00D70F9F /* TaskTableViewCell.swift in Sources */,
@@ -341,6 +401,7 @@
 				7D8E46101BE750B600D70F9F /* TaskCompareViewController.swift in Sources */,
 				7D8E45D81BE71A4100D70F9F /* AppDelegate.swift in Sources */,
 				7D13714E1BE88CD6008752BF /* NodeManager.swift in Sources */,
+				7D5157C71BF08DC400773A48 /* NodeTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +418,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D8E45F81BE71A4100D70F9F /* Task_SorterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DB4BE591BFAFB7400443630 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DB4BE621BFAFB7400443630 /* TasksViewController.swift in Sources */,
+				7DB4BE601BFAFB7400443630 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +460,14 @@
 				7D8E45E11BE71A4100D70F9F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7DB4BE651BFAFB7400443630 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DB4BE661BFAFB7400443630 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -492,6 +570,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauyoung.tasksorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -509,6 +588,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauyoung.tasksorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -560,6 +640,36 @@
 			};
 			name = Release;
 		};
+		7DB4BE691BFAFB7400443630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Task Sorter Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.beauyoung.Task-Sorter-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7DB4BE6A1BFAFB7400443630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Task Sorter Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.beauyoung.Task-Sorter-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -598,6 +708,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		7DB4BE6B1BFAFB7400443630 /* Build configuration list for PBXNativeTarget "Task Sorter Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DB4BE691BFAFB7400443630 /* Debug */,
+				7DB4BE6A1BFAFB7400443630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -54,16 +54,11 @@ extension TasksViewController: UITableViewDataSource {
         
         return cell
     }
-    
 }
 
 // MARK: - UITableViewDelegate
 
 extension TasksViewController: UITableViewDelegate {
-    
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//    }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
@@ -73,7 +68,6 @@ extension TasksViewController: UITableViewDelegate {
 
         let node = tasks[indexPath.row]
         NodeManager.sharedManager.deleteNode(node.title)
-//        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         tableView.reloadData()
     }
 }
