@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D13714E1BE88CD6008752BF /* NodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D13714D1BE88CD6008752BF /* NodeManager.swift */; };
 		7D1371531BEA088A008752BF /* DOAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1371521BEA088A008752BF /* DOAlertController.swift */; };
+		7D44AEAD1C225F9F009AFFBD /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D44AEAC1C225F9F009AFFBD /* CardsViewController.swift */; };
 		7D5157C71BF08DC400773A48 /* NodeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46191BE7572E00D70F9F /* NodeTree.swift */; };
 		7D8E45D81BE71A4100D70F9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E45D71BE71A4100D70F9F /* AppDelegate.swift */; };
 		7D8E45DD1BE71A4100D70F9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8E45DB1BE71A4100D70F9F /* Main.storyboard */; };
@@ -25,6 +26,8 @@
 		7DB4BE621BFAFB7400443630 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB4BE611BFAFB7400443630 /* TasksViewController.swift */; };
 		7DB4BE641BFAFB7400443630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4BE631BFAFB7400443630 /* Assets.xcassets */; };
 		7DB4BE671BFAFB7400443630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB4BE651BFAFB7400443630 /* Main.storyboard */; };
+		7DFCE55F1C26971600759F32 /* FullCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFCE55E1C26971600759F32 /* FullCardViewController.swift */; };
+		7DFCE5611C269E1A00759F32 /* QZCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFCE5601C269E1A00759F32 /* QZCircleSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,7 @@
 /* Begin PBXFileReference section */
 		7D13714D1BE88CD6008752BF /* NodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeManager.swift; sourceTree = "<group>"; };
 		7D1371521BEA088A008752BF /* DOAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOAlertController.swift; sourceTree = "<group>"; };
+		7D44AEAC1C225F9F009AFFBD /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		7D8E45D41BE71A4100D70F9F /* Task Sorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Sorter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8E45D71BE71A4100D70F9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D8E45DC1BE71A4100D70F9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		7DB4BE631BFAFB7400443630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DB4BE661BFAFB7400443630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DB4BE681BFAFB7400443630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DFCE55E1C26971600759F32 /* FullCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullCardViewController.swift; sourceTree = "<group>"; };
+		7DFCE5601C269E1A00759F32 /* QZCircleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QZCircleSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		7D13714F1BEA061B008752BF /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				7DFCE5601C269E1A00759F32 /* QZCircleSegue.swift */,
 				7D1371521BEA088A008752BF /* DOAlertController.swift */,
 			);
 			path = Vendor;
@@ -196,6 +203,8 @@
 				7D8E460A1BE74F4A00D70F9F /* TasksViewController.swift */,
 				7D8E461B1BE78AEE00D70F9F /* AddTaskViewController.swift */,
 				7D8E460F1BE750B600D70F9F /* TaskCompareViewController.swift */,
+				7D44AEAC1C225F9F009AFFBD /* CardsViewController.swift */,
+				7DFCE55E1C26971600759F32 /* FullCardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -395,12 +404,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D1371531BEA088A008752BF /* DOAlertController.swift in Sources */,
+				7DFCE55F1C26971600759F32 /* FullCardViewController.swift in Sources */,
 				7D8E461C1BE78AEE00D70F9F /* AddTaskViewController.swift in Sources */,
+				7D44AEAD1C225F9F009AFFBD /* CardsViewController.swift in Sources */,
 				7D8E46171BE751EE00D70F9F /* TaskTableViewCell.swift in Sources */,
 				7D8E460E1BE74F4A00D70F9F /* TasksViewController.swift in Sources */,
 				7D8E46101BE750B600D70F9F /* TaskCompareViewController.swift in Sources */,
 				7D8E45D81BE71A4100D70F9F /* AppDelegate.swift in Sources */,
 				7D13714E1BE88CD6008752BF /* NodeManager.swift in Sources */,
+				7DFCE5611C269E1A00759F32 /* QZCircleSegue.swift in Sources */,
 				7D5157C71BF08DC400773A48 /* NodeTree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,7 +578,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Task Sorter/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauyoung.tasksorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -584,7 +596,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Task Sorter/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauyoung.tasksorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -716,6 +728,7 @@
 				7DB4BE6A1BFAFB7400443630 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

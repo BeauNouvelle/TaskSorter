@@ -132,16 +132,12 @@ class NodeManager: NSObject {
         var target = search(title)
         
         if target?.title == rootNode?.title {                   // is root node
-            print("is root")
             
             if target?.right == nil {
-                print("no right")
                 rootNode = target?.left
             } else if target?.left == nil {
-                print("no left")
                 rootNode = target?.right
             } else {
-                print("Root has two children")
                 let lastNodeOnLeft = getLastOnLeft(target?.right)
                 lastNodeOnLeft.left = target?.left
                 target?.left?.parent = lastNodeOnLeft
