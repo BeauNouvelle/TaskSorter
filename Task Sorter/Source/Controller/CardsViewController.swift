@@ -50,6 +50,10 @@ class CardsViewController: UIViewController {
             transition.animationChild = selection
             transition.animationColor = UIColor(red: 40.0/255.0, green: 200.0/255.0, blue: 150.0/255.0, alpha: 1.0)
             
+            if let label = sender?.viewWithTag(11) as? UILabel {
+                transition.labelText = label.text
+            }
+            
             let toViewController = segue.destinationViewController as! FullCardViewController
             toViewController.title = (selection.viewWithTag(11) as! UILabel).text
                 self.transition.fromViewController = self

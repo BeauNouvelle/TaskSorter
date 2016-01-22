@@ -16,6 +16,7 @@ class QZCircleSegue: NSObject, UIViewControllerAnimatedTransitioning, UIViewCont
     var animationChild: AnyObject! = nil
     var fromViewController: AnyObject! = nil
     var toViewController: AnyObject! = nil
+    var labelText: String! = ""
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let child = animationChild as! UICollectionViewCell
@@ -52,6 +53,15 @@ class QZCircleSegue: NSObject, UIViewControllerAnimatedTransitioning, UIViewCont
             circularView.layer.masksToBounds = true
             circularView.alpha = 1.0
             circularView.tag = 764
+            
+//            let label = UILabel(frame: circularView.bounds)
+//            label.text = self.labelText
+//            label.textColor = UIColor.whiteColor()
+////            label.center = animationPoint
+//            label.adjustsFontSizeToFitWidth = true
+//            label.font = UIFont.systemFontOfSize(50)
+//            circularView.addSubview(label)
+            
             bottomViewController.view.addSubview(circularView)
             
             UIView.animateWithDuration(0.3, animations: { () -> Void in
@@ -74,6 +84,7 @@ class QZCircleSegue: NSObject, UIViewControllerAnimatedTransitioning, UIViewCont
                 let scale:CGFloat = -12
                 circularView.transform = CGAffineTransformMakeScale(1, 1)
                 circularView.center = animationPoint
+                
                 }) { (Finished) -> Void in
                     circularView.removeFromSuperview()
                     transitionContext.completeTransition(true)

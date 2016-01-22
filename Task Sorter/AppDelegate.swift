@@ -16,9 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        Heap.setAppId("433510453");
+        #if DEBUG
+            Heap.enableVisualizer();
+        #endif
+        
 //        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: NodeManager.Keys.TopNode.rawValue)
 //        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: NodeManager.Keys.SortedNodes.rawValue)
-
+        
         return true
     }
 

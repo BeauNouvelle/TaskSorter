@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		7D13714E1BE88CD6008752BF /* NodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D13714D1BE88CD6008752BF /* NodeManager.swift */; };
 		7D1371531BEA088A008752BF /* DOAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1371521BEA088A008752BF /* DOAlertController.swift */; };
+		7D26D6521C4C78C200BF92F4 /* libHeap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D26D6511C4C78C200BF92F4 /* libHeap.a */; };
+		7D26D6551C4C79D300BF92F4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D26D6541C4C79D300BF92F4 /* CFNetwork.framework */; };
+		7D26D6571C4C79E500BF92F4 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D26D6561C4C79E500BF92F4 /* libicucore.tbd */; };
+		7D26D6591C4C79F300BF92F4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D26D6581C4C79F300BF92F4 /* Security.framework */; };
+		7D26D65B1C4C7A0100BF92F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D26D65A1C4C7A0100BF92F4 /* SystemConfiguration.framework */; };
 		7D44AEAD1C225F9F009AFFBD /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D44AEAC1C225F9F009AFFBD /* CardsViewController.swift */; };
 		7D5157C71BF08DC400773A48 /* NodeTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E46191BE7572E00D70F9F /* NodeTree.swift */; };
 		7D8E45D81BE71A4100D70F9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E45D71BE71A4100D70F9F /* AppDelegate.swift */; };
@@ -63,6 +68,13 @@
 /* Begin PBXFileReference section */
 		7D13714D1BE88CD6008752BF /* NodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeManager.swift; sourceTree = "<group>"; };
 		7D1371521BEA088A008752BF /* DOAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOAlertController.swift; sourceTree = "<group>"; };
+		7D26D6501C4C78C200BF92F4 /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
+		7D26D6511C4C78C200BF92F4 /* libHeap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHeap.a; sourceTree = "<group>"; };
+		7D26D6531C4C791C00BF92F4 /* TaskSorter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TaskSorter-Bridging-Header.h"; sourceTree = "<group>"; };
+		7D26D6541C4C79D300BF92F4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7D26D6561C4C79E500BF92F4 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		7D26D6581C4C79F300BF92F4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7D26D65A1C4C7A0100BF92F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7D44AEAC1C225F9F009AFFBD /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		7D8E45D41BE71A4100D70F9F /* Task Sorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Sorter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8E45D71BE71A4100D70F9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +109,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D26D65B1C4C7A0100BF92F4 /* SystemConfiguration.framework in Frameworks */,
+				7D26D6591C4C79F300BF92F4 /* Security.framework in Frameworks */,
+				7D26D6571C4C79E500BF92F4 /* libicucore.tbd in Frameworks */,
+				7D26D6551C4C79D300BF92F4 /* CFNetwork.framework in Frameworks */,
+				7D26D6521C4C78C200BF92F4 /* libHeap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +144,12 @@
 		7D13714F1BEA061B008752BF /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				7D26D65A1C4C7A0100BF92F4 /* SystemConfiguration.framework */,
+				7D26D6581C4C79F300BF92F4 /* Security.framework */,
+				7D26D6561C4C79E500BF92F4 /* libicucore.tbd */,
+				7D26D6541C4C79D300BF92F4 /* CFNetwork.framework */,
+				7D26D6501C4C78C200BF92F4 /* Heap.h */,
+				7D26D6511C4C78C200BF92F4 /* libHeap.a */,
 				7DFCE5601C269E1A00759F32 /* QZCircleSegue.swift */,
 				7D1371521BEA088A008752BF /* DOAlertController.swift */,
 			);
@@ -193,6 +216,7 @@
 				7D8E46081BE74F4A00D70F9F /* Controller */,
 				7D8E460B1BE74F4A00D70F9F /* Model */,
 				7D8E460C1BE74F4A00D70F9F /* View */,
+				7D26D6531C4C791C00BF92F4 /* TaskSorter-Bridging-Header.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -573,16 +597,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)";
 				INFOPLIST_FILE = "Task Sorter/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Task Sorter/Vendor\"";
+				OTHER_LDFLAGS = "-all_load";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauyoung.tasksorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Task Sorter/Source/TaskSorter-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -591,16 +616,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)";
 				INFOPLIST_FILE = "Task Sorter/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/Task Sorter/Vendor\"";
+				OTHER_LDFLAGS = "-all_load";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beauyoung.tasksorter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Task Sorter/Source/TaskSorter-Bridging-Header.h";
 			};
 			name = Release;
 		};
